@@ -13,5 +13,6 @@ RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v${protoc
 
 # And rust tools (clippy and grcov)
 RUN rustup toolchain add nightly \
+        && rustup component add --toolchain nightly clippy \
         && rustup component add clippy  \
         && cargo install grcov
