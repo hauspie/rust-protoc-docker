@@ -2,7 +2,7 @@ FROM rust:latest
 
 RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends build-essential cmake && rm -rf /var/lib/apt/lists/*
 
-ARG protoc_ver=3.15.6
+ARG protoc_ver=3.17.0
 
 WORKDIR /usr
 
